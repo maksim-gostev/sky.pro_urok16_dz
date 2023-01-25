@@ -1,0 +1,272 @@
+[
+    {
+        "age": 31,
+        "email": "elliot16@mymail.com",
+        "first_name": "Hudson",
+        "id": 1,
+        "last_name": "Pauloh",
+        "phone": "6197021684",
+        "role": "customer"
+    },
+    {
+        "age": 41,
+        "email": "lawton46@mymail.com",
+        "first_name": "George",
+        "id": 2,
+        "last_name": "Matter",
+        "phone": "8314786677",
+        "role": "executor"
+    },
+    {
+        "age": 23,
+        "email": "tobias45@mymail.com",
+        "first_name": "Grant",
+        "id": 3,
+        "last_name": "Traviser",
+        "phone": "9528815998",
+        "role": "customer"
+    },
+    {
+        "age": 28,
+        "email": "daniel37@mymail.com",
+        "first_name": "Malcolm",
+        "id": 4,
+        "last_name": "Douglasoh",
+        "phone": "6428998684",
+        "role": "customer"
+    },
+    {
+        "age": 20,
+        "email": "joshua18@mymail.com",
+        "first_name": "Lester",
+        "id": 5,
+        "last_name": "Archibaldoh",
+        "phone": "8825887253",
+        "role": "executor"
+    },
+    {
+        "age": 27,
+        "email": "barnabe18@mymail.com",
+        "first_name": "Gareth",
+        "id": 6,
+        "last_name": "Tobiaser",
+        "phone": "8254630383",
+        "role": "customer"
+    },
+    {
+        "age": 49,
+        "email": "jaime46@mymail.com",
+        "first_name": "Vivian",
+        "id": 7,
+        "last_name": "Philipik",
+        "phone": "9884423362",
+        "role": "customer"
+    },
+    {
+        "age": 18,
+        "email": "nate46@mymail.com",
+        "first_name": "Nate",
+        "id": 8,
+        "last_name": "Travisik",
+        "phone": "8353350197",
+        "role": "executor"
+    },
+    {
+        "age": 37,
+        "email": "shahaf06@mymail.com",
+        "first_name": "Norman",
+        "id": 9,
+        "last_name": "Larryoh",
+        "phone": "6448371821",
+        "role": "executor"
+    },
+    {
+        "age": 49,
+        "email": "grant35@mymail.com",
+        "first_name": "George",
+        "id": 10,
+        "last_name": "Emiloh",
+        "phone": "8872495923",
+        "role": "executor"
+    },
+    {
+        "age": 20,
+        "email": "george38@mymail.com",
+        "first_name": "Graham",
+        "id": 11,
+        "last_name": "Reginalder",
+        "phone": "7356168167",
+        "role": "executor"
+    },
+    {
+        "age": 22,
+        "email": "graham27@mymail.com",
+        "first_name": "Malcolm",
+        "id": 12,
+        "last_name": "Jameser",
+        "phone": "8967033901",
+        "role": "executor"
+    },
+    {
+        "age": 19,
+        "email": "nicholas46@mymail.com",
+        "first_name": "Marvin",
+        "id": 13,
+        "last_name": "Austenoh",
+        "phone": "6723331776",
+        "role": "executor"
+    },
+    {
+        "age": 32,
+        "email": "myron25@mymail.com",
+        "first_name": "Jack",
+        "id": 14,
+        "last_name": "Normaner",
+        "phone": "7490416454",
+        "role": "executor"
+    },
+    {
+        "age": 20,
+        "email": "kurt17@mymail.com",
+        "first_name": "Travis",
+        "id": 15,
+        "last_name": "Chanceer",
+        "phone": "9491120005",
+        "role": "customer"
+    },
+    {
+        "age": 43,
+        "email": "john36@mymail.com",
+        "first_name": "Neil",
+        "id": 16,
+        "last_name": "Ronaldoh",
+        "phone": "8913865074",
+        "role": "customer"
+    },
+    {
+        "age": 33,
+        "email": "ebenezer08@mymail.com",
+        "first_name": "Shahaf",
+        "id": 17,
+        "last_name": "Larryoh",
+        "phone": "6514816015",
+        "role": "customer"
+    },
+    {
+        "age": 43,
+        "email": "larry37@mymail.com",
+        "first_name": "Wayne",
+        "id": 18,
+        "last_name": "Markik",
+        "phone": "6496155163",
+        "role": "executor"
+    },
+    {
+        "age": 23,
+        "email": "vincent46@mymail.com",
+        "first_name": "Dougie",
+        "id": 19,
+        "last_name": "Adrianik",
+        "phone": "9965723667",
+        "role": "customer"
+    },
+    {
+        "age": 47,
+        "email": "cuthbert36@mymail.com",
+        "first_name": "Vincent",
+        "id": 20,
+        "last_name": "Davider",
+        "phone": "7125872211",
+        "role": "executor"
+    },
+    {
+        "age": 48,
+        "email": "reginald25@mymail.com",
+        "first_name": "Addison",
+        "id": 21,
+        "last_name": "Reginaldik",
+        "phone": "9963171227",
+        "role": "executor"
+    },
+    {
+        "age": 23,
+        "email": "stephen25@mymail.com",
+        "first_name": "Arthur",
+        "id": 22,
+        "last_name": "Chanceik",
+        "phone": "6786170626",
+        "role": "executor"
+    },
+    {
+        "age": 40,
+        "email": "lawton47@mymail.com",
+        "first_name": "Earl",
+        "id": 23,
+        "last_name": "Frankliner",
+        "phone": "7851277139",
+        "role": "executor"
+    },
+    {
+        "age": 43,
+        "email": "floyd36@mymail.com",
+        "first_name": "Marshall",
+        "id": 24,
+        "last_name": "Arloer",
+        "phone": "6442333628",
+        "role": "executor"
+    },
+    {
+        "age": 33,
+        "email": "nicolas35@mymail.com",
+        "first_name": "Mark",
+        "id": 25,
+        "last_name": "Nicholasoh",
+        "phone": "8143159413",
+        "role": "customer"
+    },
+    {
+        "age": 18,
+        "email": "vincent45@mymail.com",
+        "first_name": "Edgar",
+        "id": 26,
+        "last_name": "Arthurik",
+        "phone": "6159310195",
+        "role": "executor"
+    },
+    {
+        "age": 24,
+        "email": "jeffrey05@mymail.com",
+        "first_name": "Travis",
+        "id": 27,
+        "last_name": "Pelegoh",
+        "phone": "9300837797",
+        "role": "executor"
+    },
+    {
+        "age": 30,
+        "email": "peleg36@mymail.com",
+        "first_name": "Nate",
+        "id": 28,
+        "last_name": "Albertoh",
+        "phone": "6158921977",
+        "role": "executor"
+    },
+    {
+        "age": 28,
+        "email": "jolyon37@mymail.com",
+        "first_name": "Cardew",
+        "id": 29,
+        "last_name": "Hughik",
+        "phone": "6787970230",
+        "role": "executor"
+    },
+    {
+        "age": 28,
+        "email": "myron26@mymail.com",
+        "first_name": "Graham",
+        "id": 30,
+        "last_name": "Joeyoh",
+        "phone": "6962652739",
+        "role": "executor"
+    }
+]
