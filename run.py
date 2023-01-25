@@ -93,13 +93,19 @@ db.session.commit()
 
 
 
-@app.route('/')
+@app.route('/users')
 def get_all_users():
     result = []
-    users = Offers.query.all()
+    users = Users.query.all()
     for user in users:
-        result.append(utils.instance_to_dict_offers(user))
+        result.append(utils.instance_to_dict_users(user))
     return jsonify(result)
+
+
+@app.route('/users/<int:uid>')
+def get_one_user(uid):
+    user = Users.query.get(uid)
+    return jsonify(utils.instance_to_dict_users(user))
 
 
 if __name__ == "__main__":
