@@ -17,4 +17,14 @@ def instance_to_dict_offers(instance):
     }
 
 def instance_to_dict_orders(instance):
-    pass
+    return {
+        "address": instance.address,
+        "customer_id": instance.customer_id,
+        "description": instance.description,
+        "end_date": instance.end_date,
+        "executor_id": instance.executor_id,
+        "id": instance.id,
+        "name": instance.name,
+        "price": instance.price,
+        "start_date": instance.start_date
+    }

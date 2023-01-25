@@ -67,9 +67,9 @@ with open('offers.json', 'r', encoding='utf-8') as file:
 
 for json_offer in json_offers:
     offer = Offers(
-    executor_id=json_offer['executor_id'],
-    id=json_offer['id'],
-    order_id=json_offer['order_id'])
+        executor_id=json_offer['executor_id'],
+        id=json_offer['id'],
+        order_id=json_offer['order_id'])
 
     db.session.add(offer)
 
@@ -92,7 +92,6 @@ for json_order in json_orders:
 db.session.commit()
 
 
-
 @app.route('/users')
 def get_all_users():
     result = []
@@ -107,6 +106,18 @@ def get_one_user(uid):
     user = Users.query.get(uid)
     return jsonify(utils.instance_to_dict_users(user))
 
+@app.route('/orders')
+def get_all_orders():
+    result = []
+    orders = Orders.query.all()
+    for order in orders:
+        result.append(utils.instance_to_dict_orders(order))
+    return jsonify(result)
+
+@app.route('/orders/<int:orid>')
+def get_one_orders(orid):
+    order = Orders.query.get(orid)
+    return jsonify(utils.instance_to_dict_orders(order))
 
 if __name__ == "__main__":
     app.run()
