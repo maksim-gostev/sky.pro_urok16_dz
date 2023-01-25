@@ -181,7 +181,7 @@ def delete_users(uid):
 
 
 @app.post('/orders')
-def post_user():
+def post_orders():
     data = request.json
     order = Orders(
         address=data.get('address'),
@@ -199,7 +199,7 @@ def post_user():
 
 
 @app.put('/orders/<int:orid>')
-def put_user(orid):
+def put_orders(orid):
     data = request.json
     order = Users.query.get(orid)
 
@@ -215,7 +215,7 @@ def put_user(orid):
 
 
 @app.route('/orders/<int:orid>/delete')
-def delete_users(orid):
+def delete_orders(orid):
     order = Users.query.get(orid)
     db.session.delete(order)
     db.session.commit()
@@ -223,7 +223,7 @@ def delete_users(orid):
 
 
 @app.post('/offers')
-def post_user():
+def post_offers():
     data = request.json
     offer = Offers(
         executor_id=data.get('executor_id'),
@@ -236,7 +236,7 @@ def post_user():
 
 
 @app.put('/offers/<int:ofid>')
-def put_user(ofid):
+def put_offers(ofid):
     data = request.json
     offer = Users.query.get(ofid)
 
@@ -252,7 +252,7 @@ def put_user(ofid):
 
 
 @app.route('/offers/<int:ofid>/delete')
-def delete_users(ofid):
+def delete_offers(ofid):
     offer = Users.query.get(ofid)
     db.session.delete(offer)
     db.session.commit()
