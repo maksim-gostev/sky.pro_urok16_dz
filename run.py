@@ -50,49 +50,50 @@ class Orders(db.Model):
 
 
 db.create_all()
+with app.app_context():
+    db.create_all()
+    with open('users.json', 'r', encoding='utf-8') as file:
+        json_users: [list] = json.load(file)
 
-with open('users.json', 'r', encoding='utf-8') as file:
-    json_users: [list] = json.load(file)
+    for json_user in json_users:
+        user_ = Users(
+            id=json_user['id'],
+            age=json_user['age'],
+            email=json_user['email'],
+            first_name=json_user['first_name'],
+            last_name=json_user['last_name'],
+            phone=json_user['phone'],
+            role=json_user['role'])
+        db.session.add(user_)
 
-for json_user in json_users:
-    user_ = Users(
-        id=json_user['id'],
-        age=json_user['age'],
-        email=json_user['email'],
-        first_name=json_user['first_name'],
-        last_name=json_user['last_name'],
-        phone=json_user['phone'],
-        role=json_user['role'])
-    db.session.add(user_)
+    with open('offers.json', 'r', encoding='utf-8') as file:
+        json_offers: [list] = json.load(file)
 
-with open('offers.json', 'r', encoding='utf-8') as file:
-    json_offers: [list] = json.load(file)
+    for json_offer in json_offers:
+        offer_ = Offers(
+            executor_id=json_offer['executor_id'],
+            id=json_offer['id'],
+            order_id=json_offer['order_id'])
 
-for json_offer in json_offers:
-    offer_ = Offers(
-        executor_id=json_offer['executor_id'],
-        id=json_offer['id'],
-        order_id=json_offer['order_id'])
+        db.session.add(offer_)
 
-    db.session.add(offer_)
+    with open('orders.json', 'r', encoding='utf-8') as file:
+        json_orders: [list] = json.load(file)
 
-with open('orders.json', 'r', encoding='utf-8') as file:
-    json_orders: [list] = json.load(file)
+    for json_order in json_orders:
+        order_= Orders(
+            address=json_order['address'],
+            customer_id=json_order['customer_id'],
+            description=json_order['description'],
+            end_date=json_order['end_date'],
+            executor_id=json_order['executor_id'],
+            id=json_order['id'],
+            name=json_order['name'],
+            price=json_order['price'],
+            start_date=json_order['start_date'])
 
-for json_order in json_orders:
-    order_= Orders(
-        address=json_order['address'],
-        customer_id=json_order['customer_id'],
-        description=json_order['description'],
-        end_date=json_order['end_date'],
-        executor_id=json_order['executor_id'],
-        id=json_order['id'],
-        name=json_order['name'],
-        price=json_order['price'],
-        start_date=json_order['start_date'])
-
-    db.session.add(order_)
-db.session.commit()
+        db.session.add(order_)
+    db.session.commit()
 
 
 @app.get('/users')
@@ -161,6 +162,7 @@ def put_user(uid):
     data = request.json
     user = Users.query.get(uid)
 
+    user.id = data['id']
     user.age = data['age'],
     user.email = data['email'],
     user.first_name = data['first_name'],
@@ -203,12 +205,15 @@ def put_orders(orid):
     data = request.json
     order = Users.query.get(orid)
 
-    order.age = data['age'],
-    order.email = data['email'],
-    order.first_name = data['first_name'],
-    order.last_name = data['last_name'],
-    order.phone = data['phone'],
-    order.role = data['role']
+    order.address = data['address']
+    order.customer_id = data['customer_id']
+    order.description = data['description']
+    order.end_date = data['end_date']
+    order.executor_id = data['executor_id']
+    order.id = data['id']
+    order.name = data['name']
+    order.price = data['price']
+    order.start_date = data['start_date']
 
     db.session.add(order)
     db.session.commit()
@@ -240,12 +245,9 @@ def put_offers(ofid):
     data = request.json
     offer = Users.query.get(ofid)
 
-    offer.age = data['age'],
-    offer.email = data['email'],
-    offer.first_name = data['first_name'],
-    offer.last_name = data['last_name'],
-    offer.phone = data['phone'],
-    offer.role = data['role']
+    offer.executor_id = data['executor_id'],
+    offer.id = data['id'],
+    offer.order_id = data['order_id'],
 
     db.session.add(offer)
     db.session.commit()
