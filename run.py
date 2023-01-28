@@ -162,16 +162,17 @@ def put_user(uid):
     data = request.json
     user = Users.query.get(uid)
 
-    user.id = data['id']
-    user.age = data['age']
-    user.email = data['email']
-    user.first_name = data['first_name']
-    user.last_name = data['last_name']
-    user.phone = data['phone']
-    user.role = data['role']
+    user.age = data[0]['age']
+    user.email = data[0]['email']
+    user.first_name = data[0]['first_name']
+    user.last_name = data[0]['last_name']
+    user.phone = data[0]['phone']
+    user.role = data[0]['role']
+    user.id = data[0]['id']
 
     db.session.add(user)
     db.session.commit()
+    return jsonify("")
 
 
 @app.route('/users/<int:uid>/delete')
@@ -205,18 +206,19 @@ def put_orders(orid):
     data = request.json
     order = Users.query.get(orid)
 
-    order.address = data['address']
-    order.customer_id = data['customer_id']
-    order.description = data['description']
-    order.end_date = data['end_date']
-    order.executor_id = data['executor_id']
-    order.id = data['id']
-    order.name = data['name']
-    order.price = data['price']
-    order.start_date = data['start_date']
+    order.address = data[0]['address']
+    order.customer_id = data[0]['customer_id']
+    order.description = data[0]['description']
+    order.end_date = data[0]['end_date']
+    order.executor_id = data[0]['executor_id']
+    order.id = data[0]['id']
+    order.name = data[0]['name']
+    order.price = data[0]['price']
+    order.start_date = data[0]['start_date']
 
     db.session.add(order)
     db.session.commit()
+    return jsonify("")
 
 
 @app.route('/orders/<int:orid>/delete')
@@ -245,12 +247,13 @@ def put_offers(ofid):
     data = request.json
     offer = Users.query.get(ofid)
 
-    offer.executor_id = data['executor_id']
-    offer.id = data['id']
-    offer.order_id = data['order_id']
+    offer.executor_id = data[0]['executor_id']
+    offer.id = data[0]['id']
+    offer.order_id = data[0]['order_id']
 
     db.session.add(offer)
     db.session.commit()
+    return jsonify("")
 
 
 @app.route('/offers/<int:ofid>/delete')
