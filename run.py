@@ -81,7 +81,7 @@ with app.app_context():
         json_orders: [list] = json.load(file)
 
     for json_order in json_orders:
-        order_= Orders(
+        order_ = Orders(
             address=json_order['address'],
             customer_id=json_order['customer_id'],
             description=json_order['description'],
