@@ -163,11 +163,11 @@ def put_user(uid):
     user = Users.query.get(uid)
 
     user.id = data['id']
-    user.age = data['age'],
-    user.email = data['email'],
-    user.first_name = data['first_name'],
-    user.last_name = data['last_name'],
-    user.phone = data['phone'],
+    user.age = data['age']
+    user.email = data['email']
+    user.first_name = data['first_name']
+    user.last_name = data['last_name']
+    user.phone = data['phone']
     user.role = data['role']
 
     db.session.add(user)
@@ -245,9 +245,9 @@ def put_offers(ofid):
     data = request.json
     offer = Users.query.get(ofid)
 
-    offer.executor_id = data['executor_id'],
-    offer.id = data['id'],
-    offer.order_id = data['order_id'],
+    offer.executor_id = data['executor_id']
+    offer.id = data['id']
+    offer.order_id = data['order_id']
 
     db.session.add(offer)
     db.session.commit()
